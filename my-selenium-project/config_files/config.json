@@ -1,0 +1,20 @@
+[
+ 
+    {
+      "value": "fashion",
+      "baseUrl": "https://www.example.com",
+      "firstName": "Michel",
+      "lastName": "Jordan",
+      "email": "micherJordan768@gmail.com",
+      "password": "Michel@12"
+    },
+    {
+      "value": "santander",
+      "baseUrl": "https://commerceos.staging.devpayever.com/registration/",
+      "firstName": "Breon",
+      "lastName": "Melson",
+      "email": "BreonMelson@gmail.com",
+      "password": "Breon@12"
+    }
+  
+  ]

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>API Example</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="script.js"></script>
+    
+</head>
+<body>
+
+<script>
+
+
+$.ajax({
+    url: "http://localhost:8080/api/endpoint",
+    type: "POST",
+    data: JSON.stringify(
+        {
+   
+    empName: "Ignacio",
+    jobTitle: "National Paradigm Developer",
+    salary: 35000
+}
+        
+        
+        ), // data to send in the request body
+        
+    contentType: "application/json; charset=utf-8",
+    success: function(data) {
+        console.log(data); // handle the response data here
+    },
+    error: function(jqXHR, textStatus, errorThrown) {
+        console.log(textStatus, errorThrown); // handle any errors here
+    }
+});
+
+
+</script>
+</body>
+</html>

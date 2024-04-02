@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>API Example</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<!-- <script src="script.js"></script> -->
+  <script src="employeeScript.js"></script>
+    
+</head>
+<body>
+	<form id="myForm">
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name"><br><br>
+
+		<label for="jobTitle">Job Title:</label>
+		<input type="text" id="jobTitle" name="jobTitle"><br><br>
+
+		<label for="Salary">Salary:</label>
+<input type="number" id="Salary" name="Salary">
+<br><br>
+
+
+
+  <input type="submit" value="Submit", id="submit" onclick="saveAndNavigate()">
+  <!-- <a href="./employeeTable.html">	
+</a> -->
+	</form>
+<br><br>
+<!-- <input type="number" id="filter-salary" placeholder="Enter salary"  style="align-items: right;"/>
+<button id="filter-btn">Filter</button>
+	<table id="myTable">
+		<thead>
+			<tr>
+				<th >Name&nbsp;&nbsp;<button class="arrow" onclick="sortTable(0)">&nbsp;&#8595;&nbsp;</button></th>
+				<th >Job&nbsp;&nbsp;<button class="arrow" onclick="sortTable(1)">&nbsp;&#8595;&nbsp;</button></th>
+
+				<th >Salary&nbsp;&nbsp;<button class="arrow" onclick="sortTable(2)">&nbsp;&#8595;&nbsp;</button></th>
+        <button id="1" name="1" value="1">Button</button>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table> -->
+
+
+	<script>
+
+
+
+function sortTable(column) {
+  const $table = $('table');
+  const $rows = $table.find('tbody > tr').get();
+  let ascending = true;
+  $rows.sort((a, b) => {
+    const x = $(a).find('td').eq(column).text();
+    const y = $(b).find('td').eq(column).text();
+    return x.localeCompare(y, undefined, { numeric: true });
+  });
+  if (column === $table.data('sortedColumn')) {
+    $rows.reverse();
+    ascending = false;
+  }
+  $.each($rows, function(index, row) {
+    $table.children('tbody').append(row);
+  });
+  $table.data('sortedColumn', column);
+  const $arrows = $table.find('.arrow');
+  $arrows.removeClass('asc desc');
+  const $arrow = $arrows.eq(column);
+  $arrow.toggleClass('asc', ascending);
+  $arrow.toggleClass('desc', !ascending);
+}
+
+
+
+	</script>
+</body>
+</html>

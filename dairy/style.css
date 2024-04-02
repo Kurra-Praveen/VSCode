@@ -1,0 +1,123 @@
+form {
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 30px;
+  border-radius: 5px;
+  min-height: fit-content;
+  
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+
+input[type="submit"] {
+  display: block;
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+input[type="date"] {
+  display: block;
+  width: 100%;
+  background-color: whitesmoke;
+ color: rgb(10, 15, 1);
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+input[type="text"] {
+
+margin-top: 15px;
+display: block;
+border-radius: 5px;
+padding: 10px;
+  
+}
+
+
+  div{
+    align-content: center;
+    text-align: center;
+    
+  }
+
+/* Button style */
+#signUp{
+  display: block;
+  width: 10%;
+  background-color: #cf2e94;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 40%;
+  margin-top: 10px;
+}
+
+/* Button hover effect */
+.button:hover {
+  background-color: #0056b3; /* Set button background color on hover */
+}
+
+/* Button active effect */
+.button:active {
+  background-color: #004081; /* Set button background color on active */
+}
+a{
+  
+  min-height: 15%;
+}
+#todayNotes{
+  width: 180px;
+  height: 150px;
+  padding:10px 0;
+  overflow: auto;
+  word-wrap: break-word;
+}
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: 20px auto;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+a{
+  color: brown;
+  text-decoration: none;
+}
+#signup{
+  color: #f2f2f2;
+}
+
+
+  
